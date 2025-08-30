@@ -1,0 +1,19 @@
+# Node dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+.cache/
+*.log
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
