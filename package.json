@@ -1,0 +1,11 @@
+{
+  "name": "floorplan2pov",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,cyan \"pnpm --filter floorplan2pov-server dev\" \"pnpm --filter floorplan2pov-client dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
