@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import multer from 'multer';
 import mime from 'mime';
-import { RenderBody } from './types';
-import { keyOf, get, set } from './cache';
-import { renderFromFloorplan } from './gemini';
+import { RenderBody } from './types.js';
+import { keyOf, get, set } from './cache.js';
+import { renderFromFloorplan } from './gemini.js';
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 8 * 1024 * 1024 } });
 

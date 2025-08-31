@@ -19,8 +19,8 @@ if (result.error) {
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-import { limiter } from './ratelimit';
-import { api } from './routes';
+import { limiter } from './ratelimit.js';
+import { api } from './routes.js';
 
 const app = express();
 
