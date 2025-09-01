@@ -24,18 +24,7 @@ import { api } from './routes.js';
 
 const app = express();
 
-// Allow browser clients to call the API (dev + prod)
-// CORS_ORIGIN supports a comma-separated allowlist, e.g.:
-//   CORS_ORIGIN=https://yourapp.vercel.app,https://staging.yourapp.com,http://localhost:5173
-const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
-  .split(',')
-  .map(s => s.trim())
-  .filter(Boolean);
-
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
+app.use(cors());
 
 app.use(morgan('dev'));
 app.use(limiter);
