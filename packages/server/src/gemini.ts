@@ -37,7 +37,7 @@ export async function renderFromFloorplan(opts: {
     style ? `Style hints: ${style}` : ''
   ].filter(Boolean).join('\n');
 
-  const model = getClient().getGenerativeModel({ model: 'gemini-2.5-flash-image' });
+  const model = getClient().getGenerativeModel({ model: 'gemini-2.5-flash-image-preview' });
   const res = await model.generateContent([
     { text: prompt },
     { inlineData: { data: image.toString('base64'), mimeType } }
